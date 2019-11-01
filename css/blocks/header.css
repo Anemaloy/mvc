@@ -1,0 +1,9 @@
+header {
+    min-height: 100px;
+    padding: 50px 0;
+}
+
+.header__wrap {
+    display: flex;
+    justify-content: space-between;
+}
