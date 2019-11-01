@@ -1,30 +1,34 @@
 
 <div class="table__wrap wrap">
-
+            <?php
+                if(isset($data['response'])) {
+                    echo $data['response'];   
+                }
+            ?>
         <table class="table">
             <thead>
                 <tr>
                 <th scope="col">#</th>
                 <th scope="col">
-                    <form method="post" action="/tasks">
+                    <form method="post" action="/Tasks">
                         <input type="hidden" name="sorting" value="user_name">
-                        <input type="submit" class="non__css" value="Пользователь">
+                        <input type="submit" class="non__css" value="Имя пользователя">
                     </form>
                 </th>
                 <th scope="col">
-                    <form method="post" action="/tasks">
+                    <form method="post" action="/Tasks">
                         <input type="hidden" name="sorting" value="email">
                         <input type="submit" class="non__css" value="email">
                     </form>
                 </th>
                 <th scope="col">
-                    <form method="post" action="/tasks">
+                    <form method="post" action="/Tasks">
                         <input type="hidden" name="sorting" value="content">
                         <input type="submit" class="non__css" value="Текст задачи">
                     </form>
                 </th>
                 <th scope="col">
-                    <form method="post" action="/tasks">
+                    <form method="post" action="/Tasks">
                         <input type="hidden" name="sorting" value="moderation">
                         <input type="submit" class="non__css" value="Статус">
                     </form>
@@ -58,7 +62,7 @@
             ?>
         </ul>     
 
-    <form method="post" action="/tasks/add">
+    <form method="post" action="/Tasks/add">
   <div class="form-group">
     <label for="exampleInputEmail1">Email</label>
     <input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp" placeholder="Email">

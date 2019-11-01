@@ -14,7 +14,8 @@ class LoginController extends Controller
     
 	function index()
 	{	
-		$this->view->generate('login.php', 'template.php', $data);
+            $this->view->generate('login.php', 'template.php');
+		
     }
     
     function cabinet()
@@ -30,6 +31,7 @@ class LoginController extends Controller
                 $_SESSION['admin'] = 1;
                 $this->view->generate('cabinet.php', 'template.php', $data);
             } else {
+                $data = 'неверные данные';
                 $this->view->generate('login.php', 'template.php', $data);
             }
     }

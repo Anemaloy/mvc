@@ -12,8 +12,8 @@ class TasksController extends Controller
     
 	function index()
 	{	
-        $sorting = $_POST['sorting'];
-        if(isset($sorting)) {
+        if(isset($_POST['sorting'])) {
+            $sorting = $_POST['sorting'];
             $data = $this->model->get_data($sorting);
         } else {
             $data = $this->model->get_data();
@@ -28,6 +28,7 @@ class TasksController extends Controller
                 $data = $this->model->add_data($_POST['name'], $_POST['email'], $_POST['comment']);
             }
         $data = $this->model->get_data();
+        $data['response'] = 'Задача добавлена';
         $this->view->generate('tasks.php', 'template.php', $data);
 	}
 }

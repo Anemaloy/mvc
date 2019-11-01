@@ -7,6 +7,7 @@ class Tasks extends Model
 	{	
 
         if($sorting != null) {
+			$direction = 'ASC';
 			$result = $this->execute('SELECT * FROM tasks order by ' . $sorting );
 			$limit = 3;
 			$total_result = count($result);
@@ -17,7 +18,7 @@ class Tasks extends Model
 					$page = $_GET['page'];
 				}
 			$starting_limit = ($page-1)*$limit;
-			$sql  = "SELECT * FROM tasks order by $sorting LIMIT $starting_limit, $limit";
+			$sql  = "SELECT * FROM tasks order by $sorting $direction LIMIT $starting_limit, $limit";
 			$result = $this->execute($sql);
         } else {
 			$result = $this->execute('SELECT * FROM tasks');

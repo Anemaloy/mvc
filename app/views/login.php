@@ -1,6 +1,9 @@
 
 <div class="table__wrap wrap">
-    <form method="post" action="/login/cabinet">
+<? if (isset($data)) {
+  echo 'неверные данные';
+}?>
+    <form method="post" action="/Login/cabinet">
   <div class="form-group">
     <label for="exampleInput">Логин</label>
     <input type="text" class="form-control" name="name" id="exampleInput" placeholder="ИМЯ">

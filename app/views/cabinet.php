@@ -27,7 +27,7 @@
                     '<tr><td>'.$value['id'] .'</td>
                     <td>'.$value['user_name'].'</td>
                     <td>'.$value['email'].'</td>
-                    <form method="post" action="/login/change">
+                    <form method="post" action="/Login/change">
                     <td> <input type="text" name="content" value="'.$value['content'].'"></td>
                     <td>'. $value['moderation'] . '</td>
                     <td><input type="checkbox" name="complete">
@@ -40,5 +40,13 @@
                 ?>
             </tbody>
         </table>
+
+        <ul style="display:flex; list-style:none;">
+            <?php
+                for ($i=1;  $i <= $data['pages']; $i++) {
+                    echo "<li><a href=\"?page=$i\">$i</a></li>";
+                }
+            ?>
+        </ul>  
 </div>
 
