@@ -14,10 +14,10 @@
 <body>
 <header>
     <div class="header__wrap wrap">
-        <h1>Тестовое задание</h1>
+        <h1>Простая модель MVC</h1>
         <a class="btn btn-primary" href="/Login">вход</a>
     </div>
 </header>  
-        <?php include 'app/views/'.$content_view; ?>
+    <?php include 'app/views/'.$content_view; ?>
 </body>
 </html>

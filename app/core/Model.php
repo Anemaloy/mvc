@@ -1,4 +1,4 @@
-<?
+<?php
 
 class Model
 {
@@ -19,7 +19,7 @@ class Model
 	
 	public function execute($query, array $params=null)
     {
-        if(is_null($params)){
+        if (is_null($params)) {
             $stmt = $this->pdo->query($query);
             return $stmt->fetchAll();
         }
@@ -27,12 +27,5 @@ class Model
         $stmt->execute($params);
         return $stmt->fetchAll();
     }    
-     
-
-	public function get_data()
-	{
-	}
 
 }
-
-?>

@@ -1,12 +1,11 @@
 <?php
 
-return [
-'type' => 'mysql',
-'host' => 'localhost',
-'dbname' => 'mvc',
+return 
+[
+'type'    => 'mysql',
+'host'    => 'localhost',
+'dbname'  => 'mvc',
 'charset' => 'utf8',
-'user' => 'root',
-'pass' => ''
+'user'    => 'root',
+'pass'    => ''
 ];
-
-?>
